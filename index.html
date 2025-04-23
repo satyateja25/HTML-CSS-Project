@@ -18,6 +18,7 @@
       top: 0;
       width: 100%;
       z-index: 1000;
+      left: 0px;
     }
     nav{
         margin: 0px 100px;
@@ -223,11 +224,14 @@
     .banner-text img{
         width: 50%;
     }
-
-        /* .products,.new_products,.bestsale_products {
-            grid-template-columns: repeat(2, 1fr);
-        } */
-        
+    }
+    @media only screen and (min-width: 769px) and (max-width: 1024px) {
+       .card{
+        width: 20%;
+       }
+       .card i {
+    margin: 10px 75px;
+}
     }
     </style>
 </head>
