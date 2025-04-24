@@ -156,6 +156,10 @@
     .seachitem{
         width: 100%;
     }
+    .filterblock{
+        flex-direction: column;
+        align-items: center;
+    }
 }
 .search-container {
   display: flex;
@@ -201,8 +205,8 @@
         <div style="background-color: #f2ecf0;text-align: center;">
             <h5 style="line-height: 100px;">Product</h5>
         </div>
-        <div style="margin: 30px;display: flex;">
-            <select name="" id=""style="margin:0px 100px">
+        <div class="filterblock" style="margin: 30px;display: flex;">
+            <select name="" id=""style="margin:10px 100px">
                 <option value="">Filter By Category</option>
                 <option value="">Sofa</option>
                 <option value="">Chair</option>
