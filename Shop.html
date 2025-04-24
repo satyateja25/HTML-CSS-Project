@@ -157,7 +157,32 @@
         width: 100%;
     }
 }
-    </style>
+.search-container {
+  display: flex;
+  border: 2px solid #ccc;
+  border-radius: 25px;
+  overflow: hidden;
+  background-color: white;
+}
+
+.search-input {
+  border: none;
+  padding: 10px 15px;
+  font-size: 16px;
+  outline: none;
+  flex: 1;
+}
+
+.search-button {
+  border: none;
+  color: rgb(27, 26, 26);
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+</style>
 </head>
 <body>
      <!-- Header starts here -->
@@ -176,15 +201,21 @@
         <div style="background-color: #f2ecf0;text-align: center;">
             <h5 style="line-height: 100px;">Product</h5>
         </div>
-        <div style="margin: 30px;">
+        <div style="margin: 30px;display: flex;">
             <select name="" id=""style="margin:0px 100px">
-                <option value="">Sort By</option>
-                <option value="">Price</option>
-                <option value="">Popularity</option>
-                <option value="">Rating</option>
+                <option value="">Filter By Category</option>
+                <option value="">Sofa</option>
+                <option value="">Chair</option>
+                <option value="">Watch</option>
+                <option value="">Mobile</option>
+                <option value="">Wireless</option>
             </select>
-            <input class="serachitem" type="text" placeholder="Search" style="">
-            <i class="fa-solid fa-magnifying-glass"></i>
+            <!-- <input class="serachitem" type="text" placeholder="Search" style="">
+            <i class="fa-solid fa-magnifying-glass"></i> -->
+            <div class="search-container">
+                <input type="text" placeholder="Search..." class="search-input">
+                <i class="fa-solid fa-magnifying-glass search-button"></i>
+              </div>
         </div>
         <div class="shopitems-container">
             <div class="sale_products" style="gap: 10px;">
