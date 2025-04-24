@@ -3,12 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product</title>
+    <title>Shop</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
-         /* Header Section starts*/
-         header {
+    body{
+        background: aliceblue;
+    }
+    /* Header Section starts*/
+    header {
       background-color: white;
       display: flex;
       justify-content: space-between;
@@ -21,9 +24,9 @@
       z-index: 1000;
       left: 0px;
     }
-    nav{
+    /* nav{
         margin: 0px 100px;
-    }
+    } */
     nav a {
       margin-left: 20px;
       text-decoration: none;
@@ -60,7 +63,89 @@
         color: #ccc;
     }
     /* Footer ends */
-    </style>
+
+    .sale_products {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        margin: 30px;
+        }
+        .sale_products-card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      position: relative;
+      text-align: center;
+      width: fit-content;
+    }
+   .sale_products-card img {
+      width: 100%;
+    }
+    .sale_products-card h3 {
+      font-size: 16px;
+      margin: 15px 0 10px;
+      text-align: start;
+    }
+
+    .stars {
+      color: gold;
+      margin-bottom: 10px;
+      text-align: start;
+    }
+    .stars i{
+        font-size: 14px;
+    }
+
+    .price {
+      font-weight: bold;
+      font-size: 18px;
+      margin-bottom: 10px;
+      display: flex; 
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .add-btn {
+      background: #f0f0f0;
+      border: none;
+      border-radius: 50%;
+      width: 30px;
+      cursor: pointer;
+    }
+    .add-btn i {
+      margin: 6px;
+    }
+    .add-btn:hover {
+      background: #3f6298;
+      color: white;
+    }
+    
+    @media (max-width: 426px) {
+      header {
+        flex-direction: column;
+        align-items: center;
+        margin: 0px;
+        padding: 15px 20px;
+      }
+      nav{
+        margin: 0px;;
+      }
+      nav a {
+        margin: 0 10px;
+      }
+      
+    .footer{
+        display: inline-block;
+    }
+    .footer-section{
+        width: fit-content;
+    }
+    
+}
+
+
+</style>
 </head>
 <body>
      <!-- Header starts here -->
@@ -68,28 +153,47 @@
         <img src="https://www.achieversit.com/assets/images/logo-white.png" alt="Achieversit">
         <nav>
             <a href="index.html">Home</a>
-            <a href="shop.html">Shop</a>
+            <a href="Shop.html">Shop</a>
             <a href="cart.html">Cart</a>
             <a href=""><i class="fa-solid fa-user"></i></a>
             <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
         </nav>
     </header>
     <!-- Header ends here -->
-    <div class="product-details">
-        <div style="width: 100%;background-color: azure;height: 80px;line-height: 80px;
-        text-align: center;font-size: large;font-weight: 400;">
-                Stone and Beam Westview
-        </div>
+    
+    <div class="product-container" style="padding-top: 120px;">
+      <div style="background-color: #f2ecf0;text-align: center;">
+          <h5 style="line-height: 100px;">Stone and Beam Westview</h5>
+      </div>
+      <div class="product" style="display: flex;">
         <div>
-
+          <img src="Images/double-sofa-01.png" alt="Stone and Beam Westview" style="width: 100%;">
         </div>
+        <div style="margin: 25px;">
+          <p>Stone and Beam Westview</p>
+          <div class="stars">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <div>
+            <span>$193</span>
+            <span>Category:Sofa</span>
+          </div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis officia quaerat deserunt aperiam dolores sunt nulla, laudantium impedit labore delectus nemo aliquam eum esse eligendi at consequatur. Velit, nesciunt et?</p>
+          <input type="number" value="1" style="width: 75px; border-radius: 5px; border: 1px solid #ccc; padding: 5px; margin-right: 10px;">
+          <button style="border-radius: 8px;background-color: #434378;color: white;">Add to Cart</button>
+        </div>
+      </div>
     </div>
-
+    
 
 
     <footer class="footer">
         <div class="footer-section">
-            <div style="display: flex;gap: 5px;color: white;padding-top: 20px;">
+            <div style="display: flex;gap: 5px;color: white;">
                 <i class="fa-solid fa-bag-shopping" style="font-size: x-large;"></i>
             <h2 style="margin: 0px;">Mart</h2>
             </div>
